@@ -154,7 +154,7 @@ nav li:hover a{
 	margin: 0%;
 	margin-top: 3%;
 }
-#sep {
+.sep {
 	width: 30px;
 	height: 1px;
 	background-color: #B5B5B5;
@@ -176,6 +176,12 @@ nav li:hover a{
 	font-family: tahoma;
 	text-align: left;
 	color: cadetblue;
+}
+.display-block {
+	display: block;
+}
+.display-none {
+	display: none;
 }
 .article a:link {
 	text-decoration: none;
