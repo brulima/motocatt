@@ -230,6 +230,10 @@ h1 {
 .strong {
 	font-weight: bolder;
 }
+.keep-reading {
+	font-size: 25px;
+	text-align: center;
+}
 @media (max-width: 664px) {
 	#site-title-a {
 		font-size: 90px;
