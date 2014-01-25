@@ -177,6 +177,9 @@ nav li:hover a{
 	text-align: left;
 	color: cadetblue;
 }
+h1 {
+	text-align: center;
+}
 .display-block {
 	display: block;
 }
