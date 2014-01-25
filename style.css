@@ -266,6 +266,9 @@ h1 {
 	.author-date {
 		font-size: 10px;
 	}
+	#fundo-principal {
+		margin: 3% 4.8%;
+	}
 }
 @media (max-width: 550px) {
 	#site-title-a {
