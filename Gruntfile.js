@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 			home: {
 				options: {
 					process: function(data, path){
-						path = "post/" + path.replace(/[0-9]+\./, "");
+						path = "post/" + path.replace(/posts\/[0-9]+\./, "");
 						data = data.replace(/\<div class\=\"display\-block\"\>/, '<div class="display-none">');
 						data = data.replace(/\<\!\-\-ContinueLendo\-\-\>/, '<a href="' + path + '" class="keep-reading">Continue Lendo</a>');
 						return data;
