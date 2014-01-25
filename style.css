@@ -224,6 +224,9 @@ nav li:hover a{
 #footer a:link {
 	text-decoration: none;
 }
+.strong {
+	font-weight: bolder;
+}
 @media (max-width: 664px) {
 	#site-title-a {
 		font-size: 90px;
