@@ -55,7 +55,8 @@ module.exports = function(grunt) {
 							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
 							return data;
 						}
-					return data;
+						return data;
+					}
 				},
 				files: conc_author
 			},
@@ -67,7 +68,8 @@ module.exports = function(grunt) {
 							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
 							return data;
 						}
-					return data;
+						return data;
+					}
 				},
 				files: conc_motocatts
 			},
@@ -79,7 +81,8 @@ module.exports = function(grunt) {
 							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
 							return data;
 						}
-					return data;
+						return data;
+					}
 				},
 				files: conc_home
 			}
