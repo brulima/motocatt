@@ -16,8 +16,8 @@ var fs = require('fs'),
 		conc_post[post].push('_header.html', 'posts/' + session, '_footer.html');	//Cria o post
 
 		var data = fs.readFileSync('posts/' + session).toString(), 				// Lê o arquivo
-			info = data.match(/\<h2.*\<a href\=\"author\/.*\"\>.*\<\/h2\>/)[0],	// Procura pelo nome do autor
-			auth = "author/" + info.split('href="author/')[1].split('"')[0];	// Define a pasta do autor
+			info = data.match(/\<h2.*\<a href\=\".*author\/.*\"\>.*\<\/h2\>/)[0],	// Procura pelo nome do autor
+			auth = "author/" + info.split('author/')[1].split('"')[0];	// Define a pasta do autor
 
 		if(conc_author[auth]){													// Se o autor já existe
 			conc_author[auth].push('posts/' + session);							// Adiciona o post ao arquivo
