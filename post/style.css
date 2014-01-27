@@ -6,8 +6,14 @@
 	font-family: myra;
 	src: url(../fonts/Myra.otf);
 }
-body {
+#teste {
 	background: url(../images/background-image.jpg), repeat-y;
+	position: fixed;
+	width: 100%;
+	height: 1000%;
+	top:0;
+	left:0;
+	z-index: -1;
 }
 #fundo-principal {
 	background-image: url(../images/wavegrid.png);
