@@ -1,6 +1,7 @@
 var fs = require('fs'), 
-	conc_home = {
-		'index.html': ['_header.html']
+	conc = {
+		'index.html': ['_header.html'], 
+		'motocatts.html': ['_header.html', '_headerMotocatts.html']
 	}, 
 	conc_post = {}, 
 	conc_author = {}, 
@@ -9,25 +10,25 @@ var fs = require('fs'),
 	};
 
 	fs.readdirSync('posts/').forEach(function (session){		// Para cada arquivo na pasta posts
-		conc_home['index.html'].push('posts/' + session);		// Concatena na home
+		conc['index.html'].push('posts/' + session);		// Concatena na home
 
 		var post = "post/"+session.replace(/[0-9]+\./, "");		// Replace nos números da data
-		conc_post[post] = [];
-		conc_post[post].push('_header.html', 'posts/' + session, '_footer.html');	//Cria o post
+		conc[post] = [];
+		conc[post].push('_header.html', 'posts/' + session, '_footer.html');	//Cria o post
 
-		var data = fs.readFileSync('posts/' + session).toString(), 				// Lê o arquivo
+		var data = fs.readFileSync('posts/' + session, 'utf-8'), 					// Lê o arquivo
 			info = data.match(/\<h2.*\<a href\=\".*author\/.*\"\>.*\<\/h2\>/)[0],	// Procura pelo nome do autor
-			auth = "author/" + info.split('author/')[1].split('"')[0];	// Define a pasta do autor
+			auth = "author/" + info.split('author/')[1].split('"')[0];				// Define a pasta do autor
 
-		if(conc_author[auth]){													// Se o autor já existe
-			conc_author[auth].push('posts/' + session);							// Adiciona o post ao arquivo
+		if(conc[auth]){													// Se o autor já existe
+			conc[auth].push('posts/' + session);							// Adiciona o post ao arquivo
 		}
 		else {
-			conc_author[auth] = ['_header.html', 'posts/' + session];			// Se não, cria e adiciona o post
+			conc[auth] = ['_header.html', 'posts/' + session];			// Se não, cria e adiciona o post
 		}
 
 		if (data.indexOf('<!--MotocattArticle-->') >= 0) {	
-			conc_motocatts['motocatts.html'].push('posts/' + session);
+			conc['motocatts.html'].push('posts/' + session);
 		}
 	});
 
@@ -35,8 +36,8 @@ var fs = require('fs'),
 		conc_author[auth].push('_footer.html');
 	}
 
-	conc_home['index.html'].push('_footer.html');
-	conc_motocatts['motocatts.html'].push('_footer.html');
+	conc['index.html'].push('_footer.html');
+	conc['motocatts.html'].push('_footer.html');
 
 module.exports = function(grunt) {
 	grunt.initConfig({
@@ -50,20 +51,18 @@ module.exports = function(grunt) {
 			auth: {
 				options: {
 					process: function(data, path){
-						path = "post/" + path.replace(/[0-9]+\./, "");
-						data = data.replace(/\<div class\=\"display\-block\"\>/, '<div class="display-none">');
-						data = data.replace(/\<\!\-\-ContinueLendo\-\-\>/, '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>');
+						path = "post/" + path.replace(/posts\/[0-9]+\./, "");
+						data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
 						return data;
 					}
 				},
-				files: conc_author
-			},
+				files: conc
+			}/*,
 			mtcats: {
 				options: {
 					process: function(data, path){
-						path = "post/" + path.replace(/[0-9]+\./, "");
-						data = data.replace(/\<div class\=\"display\-block\"\>/, '<div class="display-none">');
-						data = data.replace(/\<\!\-\-ContinueLendo\-\-\>/, '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>');
+						path = "post/" + path.replace(/posts\/[0-9]+\./, "");
+						data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
 						return data;
 					}
 				},
@@ -73,13 +72,12 @@ module.exports = function(grunt) {
 				options: {
 					process: function(data, path){
 						path = "post/" + path.replace(/posts\/[0-9]+\./, "");
-						data = data.replace(/\<div class\=\"display\-block\"\>/, '<div class="display-none">');
-						data = data.replace(/\<\!\-\-ContinueLendo\-\-\>/, '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>');
+						data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
 						return data;
 					}
 				},
 				files: conc_home
-			}
+			}*/
 		}
 	});
 

@@ -151,12 +151,15 @@ nav li:hover::before {
 nav li:hover a{
 	color: white;
 }
+.article img.width-65 {
+	width: 65%;
+}
 #feed {
 	text-align: center;
 }
 .article-h1 {
 	font: 40px Myra;
-	color: #333333;
+	color: #0A343F;;
 	margin: 0%;
 	margin-top: 3%;
 }
@@ -168,7 +171,7 @@ nav li:hover a{
 }
 .author-date {
 	font: 15px tahoma;
-	color: #575656;
+	color: #9DBDC5;
 	margin: 1px;
 }
 .author-date a:link {
@@ -212,12 +215,20 @@ h1 {
 .article img {
 	width: 100%;
 	height: auto;
+	box-shadow: 3px 3px 5px rgb(117, 117, 117);
+}
+.article a {
+	width: 100%;
+	height: auto;
 }
 .article p.coments {
 	font-size:15px;
 	padding-left:10%;
 	color:#666666;
 	font-style: italic;
+}
+.img-container {
+	text-align: center;
 }
 .article ul li {
 	list-style-type: none;
@@ -236,9 +247,13 @@ h1 {
 .strong {
 	font-weight: bolder;
 }
-.keep-reading {
+.article a.keep-reading {
 	font-size: 25px;
-	text-align: center;
+	color: #FF0070;
+	text-shadow: 1px 1px 3px rgb(116, 116, 116);
+}
+.width-65 {
+	width: 65%;
 }
 @media (max-width: 664px) {
 	#site-title-a {
