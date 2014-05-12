@@ -233,6 +233,17 @@ nav li:hover a{
 .strong {
 	font-weight: bolder;
 }
+article img.width-65 {
+	width: 65%;
+	text-align: center;
+}
+article img.width-45 {
+	width: 45%;
+	text-align: center;
+}
+.center {
+	text-align: center;
+}
 @media (max-width: 664px) {
 	#site-title-a {
 		font-size: 90px;

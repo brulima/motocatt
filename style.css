@@ -252,8 +252,16 @@ h1 {
 	color: #FF0070;
 	text-shadow: 1px 1px 3px rgb(116, 116, 116);
 }
-.width-65 {
+article img.width-65 {
 	width: 65%;
+	text-align: center;
+}
+article img.width-45 {
+	width: 45%;
+	text-align: center;
+}
+.center {
+	text-align: center;
 }
 @media (max-width: 664px) {
 	#site-title-a {
@@ -312,6 +320,11 @@ h1 {
 	.article-h1 {
 		font-size: 29px;
 	}
+	.article a.keep-reading {
+		font-size: 22px;
+		color: #FF0070;
+		text-shadow: 1px 1px 3px rgb(116, 116, 116);
+	}
 }
 @media (max-width: 457px) {
 	#site-title-a {
@@ -329,6 +342,11 @@ h1 {
 	}
 	.article-h1 {
 		font-size: 25px;
+	}
+	.article a.keep-reading {
+		font-size: 19px;
+		color: #FF0070;
+		text-shadow: 1px 1px 3px rgb(116, 116, 116);
 	}
 }
 @media (max-width: 397px){
