@@ -1,3 +1,4 @@
+// coments goes here blablabla
 var fs = require('fs'), 
 	conc_home = {
 		'index.html': ['_header.html'], 
