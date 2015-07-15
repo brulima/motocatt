@@ -130,7 +130,7 @@ nav li:hover a{
 .feed {
 	text-align: center;
 }
-.article-h1 {
+article h1 {
 	font: 40px Myra;
 	color: #0A343F;;
 	margin: 0%;
@@ -259,7 +259,7 @@ article img.width-45 {
 	nav ul {
 		width: 100%;
 	}
-	.article-h1 {
+	article h1 {
 		font-size: 35px;
 	}
 	.sep {
@@ -290,7 +290,7 @@ article img.width-45 {
 		font-size: 0.8em;
 		height: 20px;
 	}
-	.article-h1 {
+	article h1 {
 		font-size: 29px;
 	}
 	.article a.keep-reading {
@@ -313,7 +313,7 @@ article img.width-45 {
 		border: 10.5px solid #1E90FF;
 		top: 0.4em;
 	}
-	.article-h1 {
+	article h1 {
 		font-size: 25px;
 	}
 	.article a.keep-reading {
