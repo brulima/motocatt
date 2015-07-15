@@ -124,7 +124,7 @@ nav li:hover::before {
 nav li:hover a{
 	color: white;
 }
-.article img.width-65 {
+article>div img.width-65 {
 	width: 65%;
 }
 .feed {
@@ -153,7 +153,7 @@ article h1 {
 .author-date a {
 	color: #F9F;
 }
-.article {
+article>div {
 	margin-top: 5%;
 	font-family: tahoma;
 	text-align: left;
@@ -168,33 +168,33 @@ h1 {
 .display-none {
 	display: none;
 }
-.article a:link {
+article>div a:link {
 	text-decoration: none;
 	text-transform: uppercase;
 }
-.article a {
+article>div a {
 	color: #F9F;
 }
-.article h2 {
+article>div h2 {
 	font: 25px Myra;
 	color: #0A343F;
 	text-align: center;
 }
-.article h3 {
+article>div h3 {
 	font: 20px Myra;
 	color: #0A343F;
 	text-align: center;
 }
-.article img {
+article>div img {
 	width: 100%;
 	height: auto;
 	box-shadow: 3px 3px 5px rgb(117, 117, 117);
 }
-.article a {
+article>div a {
 	width: 100%;
 	height: auto;
 }
-.article p.coments {
+article>div p.coments {
 	font-size:15px;
 	padding-left:10%;
 	color:#666666;
@@ -203,7 +203,7 @@ h1 {
 .img-container {
 	text-align: center;
 }
-.article ul li {
+article>div ul li {
 	list-style-type: none;
 }
 .footer {
@@ -220,7 +220,7 @@ h1 {
 .strong {
 	font-weight: bolder;
 }
-.article a.keep-reading {
+article>div a.keep-reading {
 	font-size: 25px;
 	color: #FF0070;
 	text-shadow: 1px 1px 3px rgb(116, 116, 116);
@@ -293,7 +293,7 @@ article img.width-45 {
 	article h1 {
 		font-size: 29px;
 	}
-	.article a.keep-reading {
+	article>div a.keep-reading {
 		font-size: 22px;
 		color: #FF0070;
 		text-shadow: 1px 1px 3px rgb(116, 116, 116);
@@ -316,7 +316,7 @@ article img.width-45 {
 	article h1 {
 		font-size: 25px;
 	}
-	.article a.keep-reading {
+	article>div a.keep-reading {
 		font-size: 19px;
 		color: #FF0070;
 		text-shadow: 1px 1px 3px rgb(116, 116, 116);
