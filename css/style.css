@@ -61,7 +61,7 @@ a:link {
 nav {
 	position: relative;
 	text-align: center;
-	font: 25px Myra;
+	font: 30px Myra;
 }
 nav ul {
 	display: inline-block;
@@ -69,11 +69,13 @@ nav ul {
 	position: relative;
 	padding-left: 0px;
 	width: 80%;
+	margin-bottom: 7%;
+	margin-top: 4%;
 }
 nav li {
 	float: left;
 	position: relative;
-	height: 30px;
+	height: 40px;
 	width: 26%;
 }
 nav a {

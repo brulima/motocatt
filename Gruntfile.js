@@ -1,10 +1,10 @@
 // coments goes here blablabla
-var fs = require('fs'), 
+var fs = require('fs'),
 	conc_home = {
-		'index.html': ['_header.html'], 
-	}, 
-	conc_post = {}, 
-	conc_author = {}, 
+		'index.html': ['_header.html'],
+	},
+	conc_post = {},
+	conc_author = {},
 	conc_motocatts = {
 		'motocatts.html': ['_header.html', '_headerMotocatts.html']
 	};
@@ -27,7 +27,7 @@ var fs = require('fs'),
 			conc_author[auth] = ['_header.html', 'posts/' + session];			// Se não, cria e adiciona o post
 		}
 
-		if (data.indexOf('<!--MotocattArticle-->') >= 0) {	
+		if (data.indexOf('<!--MotocattArticle-->') >= 0) {
 			conc_motocatts['motocatts.html'].push('posts/' + session);
 		}
 	});
@@ -42,9 +42,6 @@ var fs = require('fs'),
 module.exports = function(grunt) {
 	grunt.initConfig({
 		concat: {
-			options: {
-				separator: '\n				<div class="sep"></div>\n'
-			},
 			post: {
 				files: conc_post
 			},
@@ -94,4 +91,4 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['concat']);
 
-}; 
+};
