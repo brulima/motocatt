@@ -23,22 +23,22 @@ body {
 	padding: 3% 4.2%;
 	min-height: 600px;
 }
-.site-title {
+a:link {
+	text-decoration: none;
+}
+.header h1 {
 	line-height: 110px;
 	text-align: center;
 }
-.site-title-a:link {
-	text-decoration: none;
-}
-.site-title-a {
+.header h1 a {
 	margin: 0px;
 	font-family: pacifico, cursive;
-	color: #1C1C1C;
+	color: #001B1B;
 	font-size: 110px;
 	text-shadow: 1px 1px 3px;
 	transition: color 0.3s linear;
 }
-.site-title-a:hover {
+.header h1:hover {
 	color:#000000;
 }
 .header-h2 {
