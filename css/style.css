@@ -6,37 +6,31 @@
 	font-family: myra;
 	src: url(../fonts/Myra.otf);
 }
-#teste {
+body {
 	background: url(../images/background-image.jpg), repeat-y;
-	position: fixed;
-	width: 100%;
-	height: 1000%;
-	top:0;
-	left:0;
-	z-index: -1;
+	margin: 0;
+	padding: 0;
 }
-#fundo-principal {
+.fundo-principal {
 	background-image: url(../images/wavegrid.png);
 	min-height: 80%;
 	margin: 3% 12.8%;
 	border-radius: 10px;
 	padding: 1.5%;
 }
-#fundo-principal-borda {
+.fundo-principal-borda {
 	border: 1px solid gray;
 	padding: 3% 4.2%;
 	min-height: 600px;
 }
-#site-title {
-	margin: 0;
+.site-title {
 	line-height: 110px;
-	height: 50%;
 	text-align: center;
 }
-#site-title-a:link {
+.site-title-a:link {
 	text-decoration: none;
 }
-#site-title-a {
+.site-title-a {
 	margin: 0px;
 	font-family: pacifico, cursive;
 	color: #1C1C1C;
@@ -44,16 +38,16 @@
 	text-shadow: 1px 1px 3px;
 	transition: color 0.3s linear;
 }
-#site-title-a:hover {
+.site-title-a:hover {
 	color:#000000;
 }
-#header-h2 {
+.header-h2 {
 	border-top: 1px solid #B5B5B5;
 	border-bottom: 1px solid #B5B5B5;
 	padding: 2% 0px;
 	display: flex;
 }
-#subtitle {
+.subtitle {
 	font-weight: 100;
 	position: relative;
 	color: white;
@@ -67,26 +61,6 @@
 	margin:0px;
 	width: 100%;
 }
-.subtitle-side{
-	width: 0px;
-	height: 0px;
-	padding: 0px;
-	position: relative;
-	border: 17.5px solid #1E90FF;
-	display: block;
-	z-index: 1;
-	top: 0.3em;
-}
-#subtitle-left{
-	box-shadow: black 2px 1px 3px;
-	border-left-color: transparent;
-	float: left;
-}
-#subtitle-right{
-	box-shadow: black -2px 1px 3px;
-	border-right-color: transparent;
-	float: right;
-}
 nav {
 	position: relative;
 	text-align: center;
@@ -98,7 +72,6 @@ nav ul {
 	position: relative;
 	padding-left: 0px;
 	width: 262px;
-	height: 100%
 }
 nav li {
 	float: left;
@@ -119,13 +92,13 @@ nav a {
 	width: 100%;
 	transition: color 0.3s linear;
 }
-#motocatt-menu {
+.motocatt-menu {
 	border: 1px solid #B5B5B5;
 	border-top-color: transparent;
 	border-bottom-color: transparent;
 	width: 46%;
 }
-#motocatt-menu a {
+.motocatt-menu a {
 	width: 100%;
 }
 nav li::before, nav li::after {
@@ -154,7 +127,7 @@ nav li:hover a{
 .article img.width-65 {
 	width: 65%;
 }
-#feed {
+.feed {
 	text-align: center;
 }
 .article-h1 {
@@ -233,15 +206,15 @@ h1 {
 .article ul li {
 	list-style-type: none;
 }
-#footer {
+.footer {
 	font: 11px tahoma;
 	text-align: center;
 	color: rgb(80, 80, 80);
 }
-#footer a {
+.footer a {
 	color: #F9F;
 }
-#footer a:link {
+.footer a:link {
 	text-decoration: none;
 }
 .strong {
@@ -264,19 +237,19 @@ article img.width-45 {
 	text-align: center;
 }
 @media (max-width: 664px) {
-	#site-title-a {
+	.site-title-a {
 		font-size: 90px;
 	}
-	#site-title {
+	.site-title {
 		line-height: 90px;
 	}
-	#subtitle {
+	.subtitle {
 		font-size: 17px;
 		padding: 1%;
 		margin-top: 1.5%;
 		margin-bottom: 1.5%;
 	}
-	#fundo-principal {
+	.fundo-principal {
 		padding: 3%;
 	}
 	.subtitle-side{
@@ -289,24 +262,24 @@ article img.width-45 {
 	.article-h1 {
 		font-size: 35px;
 	}
-	#sep {
+	.sep {
 		margin-left: 46%;
 	}
 	.author-date {
 		font-size: 10px;
 	}
-	#fundo-principal {
+	.fundo-principal {
 		margin: 3% 4.8%;
 	}
 }
 @media (max-width: 550px) {
-	#site-title-a {
+	.site-title-a {
 		font-size: 70px;
 	}
-	#site-title {
+	.site-title {
 		line-height: 70px;
 	}
-	#subtitle {
+	.subtitle {
 		font-size: 15px;
 	}
 	.subtitle-side{
@@ -327,13 +300,13 @@ article img.width-45 {
 	}
 }
 @media (max-width: 457px) {
-	#site-title-a {
+	.site-title-a {
 		font-size: 50px;
 	}
-	#site-title {
+	.site-title {
 		line-height: 50px;
 	}
-	#subtitle {
+	.subtitle {
 		font-size: 13px;
 	}
 	.subtitle-side{
@@ -350,13 +323,13 @@ article img.width-45 {
 	}
 }
 @media (max-width: 397px){
-	#subtitle {
+	.subtitle {
 		font-size: 11px;
 	}
-	#site-title-a {
+	.site-title-a {
 		font-size: 40px;
 	}
-	#site-title {
+	.site-title {
 		line-height: 40px;
 	}
 	.subtitle-side{
@@ -368,7 +341,7 @@ article img.width-45 {
 	}
 }
 @media (max-width: 343px) and (min-width: 320px){
-	#subtitle {
+	.subtitle {
 		font-size: 10px;
 	}
 	.subtitle-side{
