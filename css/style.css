@@ -1,13 +1,13 @@
 @font-face {
 	font-family: pacifico;
-	src: url(fonts/Pacifico.ttf);
+	src: url(../fonts/Pacifico.ttf);
 }
 @font-face {
 	font-family: myra;
-	src: url(fonts/Myra.otf);
+	src: url(../fonts/Myra.otf);
 }
 #teste {
-	background: url(images/background-image.jpg), repeat-y;
+	background: url(../images/background-image.jpg), repeat-y;
 	position: fixed;
 	width: 100%;
 	height: 1000%;
@@ -16,7 +16,7 @@
 	z-index: -1;
 }
 #fundo-principal {
-	background-image: url(images/wavegrid.png);
+	background-image: url(../images/wavegrid.png);
 	min-height: 80%;
 	margin: 3% 12.8%;
 	border-radius: 10px;
@@ -73,7 +73,7 @@
 	padding: 0px;
 	position: relative;
 	border: 17.5px solid #1E90FF;
-	display: block;	
+	display: block;
 	z-index: 1;
 	top: 0.3em;
 }
