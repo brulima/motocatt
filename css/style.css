@@ -198,7 +198,7 @@ article>div ul li {
 	list-style-type: none;
 }
 .footer {
-	font: 11px Segan;
+	font: 15px Segan;
 	text-align: center;
 	color: rgb(80, 80, 80);
 }
@@ -295,8 +295,6 @@ article img.width-45 {
 	}
 	article>div a.keep-reading {
 		font-size: 22px;
-		color: #FF0070;
-		text-shadow: 1px 1px 3px rgb(116, 116, 116);
 	}
 }
 @media (max-width: 457px) {
@@ -305,9 +303,6 @@ article img.width-45 {
 	}
 	.header h1 {
 		line-height: 50px;
-	}
-	.subtitle {
-		font-size: 13px;
 	}
 	.subtitle-side{
 		border: 10.5px solid #1E90FF;
@@ -318,8 +313,6 @@ article img.width-45 {
 	}
 	article>div a.keep-reading {
 		font-size: 19px;
-		color: #FF0070;
-		text-shadow: 1px 1px 3px rgb(116, 116, 116);
 	}
 }
 @media (max-width: 397px){
