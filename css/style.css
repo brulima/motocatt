@@ -142,7 +142,7 @@ article h1 {
 .author-date a {
 	color: #FD053E;
 }
-article>div {
+article {
 	margin-top: 5%;
 	font-family: Segan;
 	font-size: 20px;
