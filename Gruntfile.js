@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 					process: function(data, path){
 						if (data.indexOf('<!--ContinueLendo-->') >= 0){
 							path = "post/" + path.replace(/posts\/[0-9]+\./, "")
-							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
+							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a></div>\n					</article>';
 							return data;
 						}
 						return data;
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 					process: function(data, path){
 						if (data.indexOf('<!--ContinueLendo-->') >= 0){
 							path = "post/" + path.replace(/posts\/[0-9]+\./, "")
-							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
+							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a>						</div>\n					</article>';
 							return data;
 						}
 						return data;
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 					process: function(data, path){
 						if (data.indexOf('<!--ContinueLendo-->') >= 0){
 							path = "post/" + path.replace(/posts\/[0-9]+\./, "")
-							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo -></a>						</div>\n					</article>';
+							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a>						</div>\n					</article>';
 							return data;
 						}
 						return data;

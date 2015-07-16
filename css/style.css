@@ -6,6 +6,10 @@
 	font-family: myra;
 	src: url(../fonts/Myra.otf);
 }
+@font-face {
+	font-family: Segan;
+	src: url(../fonts/Segan.ttf);
+}
 body {
 	background: url(../images/background-image.jpg), repeat-y;
 	margin: 0;
@@ -49,7 +53,7 @@ a:link {
 	position: relative;
 	color: white;
 	text-align: center;
-	font-family: myra, tahoma;
+	font-family: myra, Segan;
 	padding: 0.5%;
 	background-color: #4fd8e8;
 	background-image: linear-gradient(to bottom, #5CACEE, #1E90FF);
@@ -69,7 +73,6 @@ nav ul {
 	position: relative;
 	padding-left: 0px;
 	width: 80%;
-	margin-bottom: 7%;
 	margin-top: 4%;
 }
 nav li {
@@ -126,30 +129,26 @@ article>div img.width-65 {
 
 article h1 {
 	font: 40px Myra;
-	color: #0A343F;;
+	color: #002828;
 	margin: 0%;
-	margin-top: 3%;
-}
-.sep {
-	width: 30px;
-	height: 1px;
-	background-color: #B5B5B5;
-	margin-left: 48%;
+	margin-top: 8%;
 }
 .author-date {
-	font: 15px tahoma;
-	color: #9DBDC5;
+	font: 17px Segan;
+	color: #002828;
 	margin: 1px;
 	text-align: center;
 }
 .author-date a {
-	color: #F9F;
+	color: #FD053E;
 }
 article>div {
 	margin-top: 5%;
-	font-family: tahoma;
+	font-family: Segan;
+	font-size: 20px;
+	line-height: 25px;
 	text-align: left;
-	color: cadetblue;
+	color: #002828;
 }
 h1 {
 	text-align: center;
@@ -165,7 +164,7 @@ article>div a:link {
 	text-transform: uppercase;
 }
 article>div a {
-	color: #F9F;
+	color: #FD053E;
 }
 article>div h2 {
 	font: 25px Myra;
@@ -199,12 +198,12 @@ article>div ul li {
 	list-style-type: none;
 }
 .footer {
-	font: 11px tahoma;
+	font: 11px Segan;
 	text-align: center;
 	color: rgb(80, 80, 80);
 }
 .footer a {
-	color: #F9F;
+	color: #FD053E;
 }
 .footer a:link {
 	text-decoration: none;
@@ -214,8 +213,11 @@ article>div ul li {
 }
 article>div a.keep-reading {
 	font-size: 25px;
-	color: #FF0070;
-	text-shadow: 1px 1px 3px rgb(116, 116, 116);
+	color: white;
+	background-color: #FD053E;
+	padding: 1%;
+	margin: 2% 0;
+	display: block;
 }
 article img.width-65 {
 	width: 65%;
@@ -228,11 +230,19 @@ article img.width-45 {
 .center {
 	text-align: center;
 }
+@media (max-width: 780px) {
+	nav ul {
+		width: 100%;
+	}
+	.fundo-principal {
+		margin: 0;
+	}
+}
 @media (max-width: 664px) {
-	.site-title-a {
+	.header h1 a {
 		font-size: 90px;
 	}
-	.site-title {
+	.header h1 {
 		line-height: 90px;
 	}
 	.subtitle {
@@ -243,6 +253,7 @@ article img.width-45 {
 	}
 	.fundo-principal {
 		padding: 3%;
+		border-radius: 0;
 	}
 	.subtitle-side{
 		border: 11.5px solid #1E90FF;
@@ -254,21 +265,15 @@ article img.width-45 {
 	article h1 {
 		font-size: 35px;
 	}
-	.sep {
-		margin-left: 46%;
-	}
 	.author-date {
-		font-size: 10px;
-	}
-	.fundo-principal {
-		margin: 3% 4.8%;
+		font-size: 12px;
 	}
 }
 @media (max-width: 550px) {
-	.site-title-a {
+	.header h1 a {
 		font-size: 70px;
 	}
-	.site-title {
+	.header h1 {
 		line-height: 70px;
 	}
 	.subtitle {
@@ -278,9 +283,12 @@ article img.width-45 {
 		border: 11.5px solid #1E90FF;
 		top: 0.5em;
 	}
+	nav {
+		font-size: 25px;
+	}
 	nav li {
 		font-size: 0.8em;
-		height: 20px;
+		height: 25px;
 	}
 	article h1 {
 		font-size: 29px;
@@ -292,10 +300,10 @@ article img.width-45 {
 	}
 }
 @media (max-width: 457px) {
-	.site-title-a {
+	.header h1 a {
 		font-size: 50px;
 	}
-	.site-title {
+	.header h1 {
 		line-height: 50px;
 	}
 	.subtitle {
@@ -318,10 +326,10 @@ article img.width-45 {
 	.subtitle {
 		font-size: 11px;
 	}
-	.site-title-a {
+	.header h1 a {
 		font-size: 40px;
 	}
-	.site-title {
+	.header h1 {
 		line-height: 40px;
 	}
 	.subtitle-side{
