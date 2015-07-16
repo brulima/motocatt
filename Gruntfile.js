@@ -39,6 +39,16 @@ var fs = require('fs'),
 	conc_home['index.html'].push('_footer.html');
 	conc_motocatts['motocatts.html'].push('_footer.html');
 
+	var process = function(data, path){
+		if (data.indexOf('<!--ContinueLendo-->') >= 0){
+			path = "post/" + path.replace(/posts\/[0-9]+\./, "")
+			data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a></div>\n					</article>';
+		}
+		data = data.replace("<h1>", '<h1><a href="'+ path + '">');
+		data = data.replace("</h1>", '</a></h1>');
+		return data;
+	};
+
 module.exports = function(grunt) {
 	grunt.initConfig({
 		concat: {
@@ -47,46 +57,19 @@ module.exports = function(grunt) {
 			},
 			auth: {
 				options: {
-					process: function(data, path){
-						if (data.indexOf('<!--ContinueLendo-->') >= 0){
-							path = "post/" + path.replace(/posts\/[0-9]+\./, "")
-							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a></div>\n					</article>';
-							data = data.replace("<h1>", '<h1><a href="'+ path + '">');
-							data = data.replace("</h1>", '</a></h1>');
-							return data;
-						}
-						return data;
-					}
+					process: process
 				},
 				files: conc_author
 			},
 			mtcats: {
 				options: {
-					process: function(data, path){
-						if (data.indexOf('<!--ContinueLendo-->') >= 0){
-							path = "post/" + path.replace(/posts\/[0-9]+\./, "")
-							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a>						</div>\n					</article>';
-							data = data.replace("<h1>", '<h1><a href="'+ path + '">');
-							data = data.replace("</h1>", '</a></h1>');
-							return data;
-						}
-						return data;
-					}
+					process: process
 				},
 				files: conc_motocatts
 			},
 			home: {
 				options: {
-					process: function(data, path){
-						if (data.indexOf('<!--ContinueLendo-->') >= 0){
-							path = "post/" + path.replace(/posts\/[0-9]+\./, "")
-							data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a>						</div>\n					</article>';
-							data = data.replace("<h1>", '<h1><a href="'+ path + '">');
-							data = data.replace("</h1>", '</a></h1>');
-							return data;
-						}
-						return data;
-					}
+					process: process
 				},
 				files: conc_home
 			}
