@@ -6,20 +6,20 @@ var header = '../_header.html';
 var footer = '../_footer.html';
 var about = '../about-content.html';
 var headerMotocatts = '../_headerMotocatts.html';
-var indexFile = 'index.html';
-var aboutFile = 'about.html';
-var motocFile = 'motocatts.html';
+var indexFile = '../index.html';
+var aboutFile = '../about.html';
+var motocFile = '../motocatts.html';
 
 var conc_home = {
-	'index.html': [header]
+	'../index.html': [header]
 };
 var conc_about = {
-	'about.html': [header, about, footer]
+	'../about.html': [header, about, footer]
 };
 var conc_post = {};
 var conc_author = {};
 var conc_motocatts = {
-	'motocatts.html': [header, headerMotocatts]
+	'../motocatts.html': [header, headerMotocatts]
 };
 
 var buildConcatObject = function () {
@@ -37,7 +37,7 @@ var buildConcatObject = function () {
 		// Concat Author
 		var data = fs.readFileSync(templatePostPath, 'utf-8');
 		var info = data.match(/\<h2.*\<a href\=\".*author\/.*\"\>.*\<\/h2\>/)[0];
-		var auth = "author/" + info.split('author/')[1].split('"')[0];
+		var auth = "../author/" + info.split('author/')[1].split('"')[0];
 
 		if (conc_author[auth]){
 			conc_author[auth].push(templatePostPath);
@@ -48,7 +48,7 @@ var buildConcatObject = function () {
 
 		// Concat motocatt page
 		if (data.indexOf('<!--MotocattArticle-->') >= 0) {
-			conc_motocatts['motocatts.html'].push(templatePostPath);
+			conc_motocatts['../motocatts.html'].push(templatePostPath);
 		}
 	});
 
@@ -56,8 +56,8 @@ var buildConcatObject = function () {
 		conc_author[auth].push(footer);
 	}
 
-	conc_home['index.html'].push(footer);
-	conc_motocatts['motocatts.html'].push(footer);
+	conc_home['../index.html'].push(footer);
+	conc_motocatts['../motocatts.html'].push(footer);
 };
 
 var process = function(data, path){
