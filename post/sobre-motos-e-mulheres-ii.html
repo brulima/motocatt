@@ -7,7 +7,7 @@
 		<base href="http://brulima.github.io/motocatt/">
 		<script>
 			(function homolog (hostname) {
-				if (hostname.indexOf('homolog')) {
+				if (hostname.indexOf('homolog') > -1) {
 					var base = document.querySelector('base');
 					base.setAttribute('href', hostname);
 				} else {
