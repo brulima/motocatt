@@ -5,8 +5,19 @@
 		<meta charset="UTF-8">
 		<title>motocatt | Liberdade em duas rodas.</title>
 		<base href="http://brulima.github.io/motocatt/">
-		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="js/ga.js"></script>
+		<script>
+			(function homolog (hostname) {
+				if (hostname.indexOf('homolog')) {
+					var base = document.querySelector('base');
+					base.setAttribute('href', hostname);
+				} else {
+					var script = document.createElement('script');
+					script.async = true;
+					script.src = 'js/ga.js';
+					document.body.appendChild(script);
+				}
+			})('http://' + document.location.hostname + '/');
+		</script>
 	</head>
 	<body>
 		<div class="fundo-principal">

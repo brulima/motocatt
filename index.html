@@ -5,8 +5,19 @@
 		<meta charset="UTF-8">
 		<title>motocatt | Liberdade em duas rodas.</title>
 		<base href="http://brulima.github.io/motocatt/">
-		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="js/ga.js"></script>
+		<script>
+			(function homolog (hostname) {
+				if (hostname.indexOf('homolog')) {
+					var base = document.querySelector('base');
+					base.setAttribute('href', hostname);
+				} else {
+					var script = document.createElement('script');
+					script.async = true;
+					script.src = 'js/ga.js';
+					document.body.appendChild(script);
+				}
+			})('http://' + document.location.hostname + '/');
+		</script>
 	</head>
 	<body>
 		<div class="fundo-principal">
@@ -30,7 +41,7 @@
 					<article>
 						<header>
 							<h1><a href="post/sobre-motos-e-mulheres-ii.html">Sobre Motos e Mulheres II</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 20 de Janeiro de 2014</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 20 de Janeiro de 2014</h2>
 						</header>
 						<div>
 							<div class="img-container">
@@ -45,7 +56,7 @@
 					<article>
 						<header>
 							<h1><a href="post/como-fazer-revisao-em-sua-moto.html">Como Fazer Revisão em Sua Moto</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 03 de Dezembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 03 de Dezembro de 2013</h2>
 						</header>
 						<div>
 							<p>Veja o tutorial e saiba como verificar se a manutenção da sua motocicleta está em dia:</p>
@@ -61,7 +72,7 @@
 					<article>
 						<header>
 							<h1><a href="post/adriana-costa.html">Adriana Costa</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 01 de Dezembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 01 de Dezembro de 2013</h2>
 						</header>
 						<div>
 							<p>Olá pessoas! Hoje eu venho trazer pra vocês a história de uma viagem para Bonito - MS da leitora Adriana Costa!</p>
@@ -76,7 +87,7 @@
 					<article>
 						<header>
 							<h1><a href="post/sobre-motos-e-mulheres-i.html">Sobre Motos e Mulheres I</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 28 de Novembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 28 de Novembro de 2013</h2>
 						</header>
 						<div>
 							<div class="center">
@@ -89,7 +100,7 @@
 					<article>
 						<header>
 							<h1><a href="post/sobre-roupas-e-acessorios.html">Sobre Roupas e Acessórios</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 24 de Novembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 24 de Novembro de 2013</h2>
 						</header>
 						<div>
 							<p>Ser mulher em cima de uma moto nem sempre é fácil. Principalmente quando usamos as motocas todos os dias, seja para trabalhar, estudar, ou simplesmente sair no final de semana. Como manter a aparência e chegar inteira no destino? Como manter o cabelo bonito? Motocatt traz umas dicas para vocês!</p>
@@ -106,7 +117,7 @@
 					<article>
 						<header>
 							<h1><a href="post/peggy-venhoven.html">Peggy Venhoven</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 20 de Novembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 20 de Novembro de 2013</h2>
 						</header>
 						<div>
 						<p>Olá pessoas! Hoje eu venho trazer pra vocês uma história da leitora Peggy Venhoven!</p>
@@ -119,7 +130,7 @@
 					<article>
 						<header>
 							<h1><a href="post/pesquisa-sobre-motos-e-mulheres.html">Pesquisa - Sobre Motos e Mulheres</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 20 de Novembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 20 de Novembro de 2013</h2>
 						</header>
 						<div>
 							<p>Sabemos que a cada dia nós, mulheres, conquistamos um pouco mais do repeito e espaço que é nosso por direito. A cada dia mais uma pessoa é pega pela conscientização de que chamar uma mulher de gostosa na rua não é legal, nem engraçado, que não tem sentido em achar que uma mulher não pode andar de moto, ou achar que as moças que andam de moto são masculinas.</p>
@@ -132,7 +143,7 @@
 					<article>
 						<header>
 							<h1><a href="post/beryl-swain-video.html">Beryl Swain - Vídeo</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 18 de Novembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 18 de Novembro de 2013</h2>
 						</header>
 						<div>
 							<p>Achei um vídeo super legal da <a title="Grandes Mulheres – Parte I" href="http://motocatt.wordpress.com/2013/10/02/grandes-mulheres-parte-i/">Beryl Swain</a>, que já foi mencionada <a title="Grandes Mulheres – Parte I" href="http://motocatt.wordpress.com/2013/10/02/grandes-mulheres-parte-i/">nesse post</a>. É um vídeo bem antigo e só consegui encontrá-lo <a href="http://www.britishpathe.com/video/girl-racer">nesse link</a>. Vale a pena conferir!</p>
@@ -144,7 +155,7 @@
 					<article>
 						<header>
 							<h1><a href="post/salao-duas-rodas-ii.html">Salão Duas Rodas II</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 11 de Novembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 11 de Novembro de 2013</h2>
 						</header>
 						<div>
 							<p>No mês de Outubro tivemos em São Paulo o Salão Duas Rodas. E depois de um tempão tentando conseguir um tempinho pra separar as fotos e editar o vídeo, eu consegui! \o/</p>
@@ -162,7 +173,7 @@
 					<article>
 						<header>
 							<h1><a href="post/gestantes.html">Gestantes</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 03 de Novembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 03 de Novembro de 2013</h2>
 						</header>
 						<div>
 							<p>Já que o assunto é "motos e mulheres" não podemos deixar de falar sobre gravidez. Existem muitos cuidados a ser tomados durante a gestação e algumas dúvidas em relação às motocas.</p>
@@ -180,7 +191,7 @@
 					<article>
 						<header>
 							<h1><a href="post/capacetes.html">Capacetes</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 17 de Outubro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 17 de Outubro de 2013</h2>
 						</header>
 						<div>
 							<p >Nem precisa explicar a importância dos motociclistas usarem capacetes, né? Mas ainda existem muitas dúvidas em torno desse ítem imprescindível, como validade, tipos de capacetes, leis que envolvem capacetes, e etc... Que tal matarmos essas dúvidas?</p>
@@ -192,7 +203,7 @@
 					<article>
 						<header>
 							<h1><a href="post/grandes-mulheres-parte-ii.html">Grandes Mulheres - Parte II</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 14 de Outubro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 14 de Outubro de 2013</h2>
 						</header>
 						<div>
 							<h3>1988 - Taru Rinne</h3>
@@ -215,7 +226,7 @@
 					<article>
 						<header>
 							<h1><a href="post/bruna-lima.html">Bruna Lima</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 08 de Outubro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 08 de Outubro de 2013</h2>
 						</header>
 						<div>
 							<p>Me interessei por motos por causa do meu pai, ele comprou uma e desde então eu andava as vezes com ele, e comecei a ver que pode não ser tão perigoso, depende muito da responsabilidade do motociclista. Tirei minha habilitação há pouco tempo, e ainda estou no estágio de treino. Em alguns finais de semana costumamos sair pra pegar estrada, ele na moto dele e eu na minha. Por enquanto minha moto fica em outra cidade pois em São Paulo é mais complicado.</p>
@@ -226,7 +237,7 @@
 					<article>
 						<header>
 							<h1><a href="post/salao-duas-rodas.html">Salão Duas Rodas</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 05 de Outubro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 05 de Outubro de 2013</h2>
 						</header>
 						<div>
 							<p>Na semana que vem teremos Salão Duas Rodas! Eba!</p>
@@ -246,7 +257,7 @@
 					<article>
 						<header>
 							<h1><a href="post/motor-maids-inc.html">Motor Maids Inc</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 03 de Outubro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 03 de Outubro de 2013</h2>
 						</header>
 						<div>
 							<p>Vocês sabiam que o moto clube mais antigo do mundo foi o primeiro moto clube formado por mulheres?</p>
@@ -270,7 +281,7 @@
 					<article>
 						<header>
 							<h1><a href="post/grandes-mulheres-parte-i.html">Grandes Mulheres - Parte I</a></h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 02 de Outubro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 02 de Outubro de 2013</h2>
 						</header>
 						<div>
 							<p>Me disseram que andar de moto é coisa de homem, e que agora nós, mulheres, estamos invadindo cada vez mais o mundo "masculino". Mas será que é isso mesmo? Abaixo tem uma lista de mulheres que fizeram a diferença no mundo das motocicletas , provando que lugar de mulher realmente é atrás do tanque... de uma moto!</p>
@@ -308,5 +319,6 @@
 				</footer>
 			</div>
 		</div>
+        <link rel="stylesheet" href="css/style.css" />
 	</body>
 </html>

@@ -5,16 +5,27 @@
 		<meta charset="UTF-8">
 		<title>motocatt | Liberdade em duas rodas.</title>
 		<base href="http://brulima.github.io/motocatt/">
-		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="js/ga.js"></script>
+		<script>
+			(function homolog (hostname) {
+				if (hostname.indexOf('homolog')) {
+					var base = document.querySelector('base');
+					base.setAttribute('href', hostname);
+				} else {
+					var script = document.createElement('script');
+					script.async = true;
+					script.src = 'js/ga.js';
+					document.body.appendChild(script);
+				}
+			})('http://' + document.location.hostname + '/');
+		</script>
 	</head>
 	<body>
 		<div class="fundo-principal">
 			<div class="fundo-principal-borda">
 				<header class="header">
-					<h1>
+					<h1><a href="post/_header.html">
 						<a href=".">motocatt</a>
-					</h1>
+					</a></h1>
 					<div class="header-h2">
 						<h2 class="subtitle">Liberdade em Duas Rodas.</h2>
 					</div>
@@ -26,8 +37,9 @@
 						</ul>
 					</nav>
 				</header>
+				<div class="feed">
 				<article>
-					<h1>About</h1>
+					<h1><a href="post/about-content.html">About</a></h1>
 					<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 20 de Janeiro de 2014</h2>
 					<div>
 						<h3>O Blog</h3>
@@ -37,10 +49,12 @@
 						Tenho muito interesse em fazer cursos de pilotagem esportiva. Minha moto atual é uma Suzuki Yes que eu chamo de Megan (É Megan porque tinha que ter nome de mulher gostosa), a próxima em que eu penso ter é uma Fazer 250 roxinha, e mais pra frente penso em uma Ninja 250.</p>
 					</div>
 				</article>
+				</div>
 				<footer class="footer">
 					<p>Powered by <a href="https://brulima.github.io/">Bruna Lima</a></p>
 				</footer>
 			</div>
 		</div>
+        <link rel="stylesheet" href="css/style.css" />
 	</body>
 </html>

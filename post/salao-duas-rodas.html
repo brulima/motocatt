@@ -3,10 +3,21 @@
 	<head>
 		<meta name="viewport" content="initial-scale=1, minimum-scale=1">
 		<meta charset="UTF-8">
-		<title>motocatt | Liberdade em duas rodas.</title>
+		<title>motocatt | Salao Duas Rodas</title>
 		<base href="http://brulima.github.io/motocatt/">
-		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="js/ga.js"></script>
+		<script>
+			(function homolog (hostname) {
+				if (hostname.indexOf('homolog')) {
+					var base = document.querySelector('base');
+					base.setAttribute('href', hostname);
+				} else {
+					var script = document.createElement('script');
+					script.async = true;
+					script.src = 'js/ga.js';
+					document.body.appendChild(script);
+				}
+			})('http://' + document.location.hostname + '/');
+		</script>
 	</head>
 	<body>
 		<div class="fundo-principal">
@@ -30,12 +41,12 @@
 					<article>
 						<header>
 							<h1>Salão Duas Rodas</h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 05 de Outubro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 05 de Outubro de 2013</h2>
 						</header>
 						<div>
 							<p>Na semana que vem teremos Salão Duas Rodas! Eba!</p>
 							<p>O evento ocorá de 8 a 13 de Outubro no Pavilhão de Exposições do Anhembi, sendo um dos eventos de maior público em São Paulo! O evento contará com vários expositores que apresentarão novidades para motociclistas, novos modelos, acessórios e atrações.</p>
-							<p>Todos os dias você poderá ver apresentações da Equipe Força e Ação e Jorge Negretti Motocross Show, Test-rides, além de outras atrações. Você pode conferir a programação <a title="Programação" href="http://www.salaoduasrodas.com.br/O-Evento/Programacao/" target="_blank">AQUI</a>. Também teremos atrações nos estandes dos expositores, dentre elas teremos sessão de autógrafos com a <strong>Sabrina Katana </strong>(Enduro) nos dias 09/10 e 10/10 às 17h00 e a presença da <strong>Sabrina Paiuta</strong> (Motovelocidade) no dia 11/10 às 16h00. Venha incentivar nossas atletas! Você pode conferir as atrações dos expositores <a title="Atrações dos Expositores" href="http://www.salaoduasrodas.com.br/O-Evento/Atracoes-dos-Expositores/" target="_blank">AQUI</a>.</p>
+							<p>Todos os dias você poderá ver apresentações da Equipe Força e Ação e Jorge Negretti Motocross Show, Test-rides, além de outras atrações. Você pode conferir a programação <a title="Programação" href="http://www.salaoduasrodas.com.br/O-Evento/Programacao/" target="_blank">aqui</a>. Também teremos atrações nos estandes dos expositores, dentre elas teremos sessão de autógrafos com a <strong>Sabrina Katana </strong>(Enduro) nos dias 09/10 e 10/10 às 17h00 e a presença da <strong>Sabrina Paiuta</strong> (Motovelocidade) no dia 11/10 às 16h00. Venha incentivar nossas atletas! Você pode conferir as atrações dos expositores <a title="Atrações dos Expositores" href="http://www.salaoduasrodas.com.br/O-Evento/Atracoes-dos-Expositores/" target="_blank">aqui</a>.</p>
 
 
 							<div class="center">
@@ -43,8 +54,8 @@
 								<img class="width-65" title="Sabrina Paiuta" alt="Sabrina Paiuta" src="http://motocatt.files.wordpress.com/2013/10/942196_651162794902953_663822404_n.jpg?w=300" />
 							</div>
 							<p>A Honda apresentará sua nova campanha de serviços e peças. A operação será realizada próximo às cabines de estacionamento com uma unidade móvel para atender os clientes da marca. Entre os serviços gratuitos que a montadora oferece estão 900 vagas rotativas exclusivas para motos Honda, troca de óleo, revisão de 21 itens e ajustes rápidos quando necessários. As vagas para o estacionamento Honda terá acesso pela Avenida Olavo Fontoura.</p>
-							<p>Os ingressos estarão à venda com desconto até o dia 07/10. Você pode comprá-los pelo site da Tickets For Fun (<a title="Ingressos" href="http://premier.ticketsforfun.com.br/shows/show.aspx?sh=DUASRODAS" target="_blank">AQUI</a>) ou diretamente no Credicard Hall sem taxa de conveniência. Nos dias do evento os ingressos serão vendidos no Anhembi. Os ingressos vão de R$15,00 a R$100,00</p>
-							<p>Mais informações:<a title="Salão Duas Rodas" href="http://www.salaoduasrodas.com.br" target="_blank"> salaoduasrodas.com.br</a></p>
+							<p>Os ingressos estarão à venda com desconto até o dia 07/10. Você pode comprá-los pelo site da Tickets For Fun (<a title="Ingressos" href="http://premier.ticketsforfun.com.br/shows/show.aspx?sh=DUASRODAS" target="_blank">aqui</a>) ou diretamente no Credicard Hall sem taxa de conveniência. Nos dias do evento os ingressos serão vendidos no Anhembi. Os ingressos vão de R$15,00 a R$100,00</p>
+							<p><a title="Salão Duas Rodas" href="http://www.salaoduasrodas.com.br" target="_blank">Mais informações</a></p>
 						</div>
 					</article>
 				</div>
@@ -53,5 +64,6 @@
 				</footer>
 			</div>
 		</div>
+        <link rel="stylesheet" href="css/style.css" />
 	</body>
 </html>

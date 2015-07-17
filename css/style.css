@@ -169,7 +169,6 @@ h1 {
 }
 article>div a:link {
 	text-decoration: none;
-	text-transform: uppercase;
 }
 article>div a {
 	color: #FD053E;
@@ -220,11 +219,11 @@ article>div ul li {
 	font-weight: bolder;
 }
 article>div a.keep-reading {
-	font-size: 25px;
+	font-size: 30px;
 	color: white;
-	background-color: #FD053E;
-	padding: 1%;
-	margin: 2% 0;
+	background-color: #002828;
+	padding: 1.5%;
+	margin: 4% 0;
 	display: block;
 }
 article img.width-65 {

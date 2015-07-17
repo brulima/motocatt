@@ -3,10 +3,21 @@
 	<head>
 		<meta name="viewport" content="initial-scale=1, minimum-scale=1">
 		<meta charset="UTF-8">
-		<title>motocatt | Liberdade em duas rodas.</title>
+		<title>motocatt | Peggy Venhoven</title>
 		<base href="http://brulima.github.io/motocatt/">
-		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="js/ga.js"></script>
+		<script>
+			(function homolog (hostname) {
+				if (hostname.indexOf('homolog')) {
+					var base = document.querySelector('base');
+					base.setAttribute('href', hostname);
+				} else {
+					var script = document.createElement('script');
+					script.async = true;
+					script.src = 'js/ga.js';
+					document.body.appendChild(script);
+				}
+			})('http://' + document.location.hostname + '/');
+		</script>
 	</head>
 	<body>
 		<div class="fundo-principal">
@@ -31,7 +42,7 @@
 					<article>
 						<header>
 							<h1>Peggy Venhoven</h1>
-							<h2 class="author-date"> Postador por <a href="http://brulima.github.io/motocatt/author/bruna-lima.html">Bruna Lima</a> em 20 de Novembro de 2013</h2>
+							<h2 class="author-date"> Postador por <a href="author/bruna-lima.html">Bruna Lima</a> em 20 de Novembro de 2013</h2>
 						</header>
 						<div>
 						<p>Olá pessoas! Hoje eu venho trazer pra vocês uma história da leitora Peggy Venhoven!</p>
@@ -47,5 +58,6 @@
 				</footer>
 			</div>
 		</div>
+        <link rel="stylesheet" href="css/style.css" />
 	</body>
 </html>
