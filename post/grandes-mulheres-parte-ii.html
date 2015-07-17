@@ -11,6 +11,8 @@
 					var base = document.querySelector('base');
 					base.setAttribute('href', hostname);
 				} else {
+					var base = document.querySelector('base');
+					base.setAttribute('href', hostname + 'motocatt/');
 					var script = document.createElement('script');
 					script.async = true;
 					script.src = 'js/ga.js';
