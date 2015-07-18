@@ -3,6 +3,7 @@ var fs = require('fs');
 var templatePostFolder = '../template-post/';
 var postFolder = '../post/';
 var header = '../_header.html';
+var fbComents = '../_fb_coments.html';
 var footer = '../_footer.html';
 var about = '../about-content.html';
 var headerMotocatts = '../_headerMotocatts.html';
@@ -32,7 +33,7 @@ var buildConcatObject = function () {
 		var templatePostPath = templatePostFolder + session;
 
 		conc_post[postPath] = [];
-		conc_post[postPath].push(header, templatePostPath, footer);
+		conc_post[postPath].push(header, templatePostPath, fbComents, footer);
 
 		// Concat Author
 		var data = fs.readFileSync(templatePostPath, 'utf-8');
