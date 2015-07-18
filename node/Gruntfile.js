@@ -87,6 +87,19 @@ var setTitle = function(dir) {
 	});
 };
 
+var setFacebookPage = function(dir) {
+	dir = '../' + dir + '/';
+	fs.readdirSync(dir).forEach(function (file){
+		var filePath = dir + file;
+		var data = fs.readFileSync(filePath, 'utf-8');
+
+		data = data.replace('<div class="fb-comments" data-href="https://brulima.github.io/motocatt/post/" data-width="100%" data-numposts="3"></div>', 
+			'<div class="fb-comments" data-href="https://brulima.github.io/motocatt/post/' + file + '" data-width="100%" data-numposts="3"></div>');
+
+		fs.writeFileSync(filePath, data, 'utf-8');
+	});
+};
+
 var getTitleName = function (file) {
 	file = file.replace('.html', '');
 	file = file.split('-');
@@ -136,7 +149,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('setTitle', setTitle);
 	grunt.registerTask('buildConcatObject', buildConcatObject);
+	grunt.registerTask('setFacebookPage', setFacebookPage);
 
-	grunt.registerTask('default', ['buildConcatObject', 'concat', 'setTitle:post', 'setTitle:author']);
+	grunt.registerTask('default', ['buildConcatObject', 'concat', 'setTitle:post', 'setTitle:author', 'setFacebookPage:post']);
 
 };
