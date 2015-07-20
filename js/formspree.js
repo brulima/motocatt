@@ -14,8 +14,7 @@
 			{
 				mimetype: 'image/*',
 			    container: 'modal',
-			    services: ['COMPUTER', 'FACEBOOK', 'GOOGLE_DRIVE', 'INSTAGRAM', 'URL', 'WEBCAM', ],
-			    debug: true
+			    services: ['COMPUTER', 'FACEBOOK', 'GOOGLE_DRIVE', 'INSTAGRAM', 'URL', 'WEBCAM', ]
 			},
 			function(data){
 				for (var i = 0; i < data.length; i++) {

@@ -61,7 +61,6 @@ article a:visited {
 	background-color: #4fd8e8;
 	background-image: linear-gradient(to bottom, #5CACEE, #1E90FF);
 	box-shadow: black 0px 1px 3px;
-	z-index: 9999;
 	margin:0px;
 	width: 100%;
 }
@@ -89,7 +88,7 @@ nav a {
 	position: absolute;
 	top: 5px;
 	left: 0px;
-	z-index: 9999;
+	z-index: 2;
 	text-align: center;
 	width: 100%;
 	transition: color 0.3s linear;
@@ -154,7 +153,6 @@ article h1 a:visited {
 	color: #FD053E;
 }
 article {
-	margin-top: 5%;
 	font-family: Segan;
 	font-size: 20px;
 	line-height: 25px;
@@ -246,10 +244,10 @@ input, textarea {
 	padding: 1%;
 	font-family: 'Segan';
 	font-size: 1.1em;
-	width: 40%;
+	width: 100%;
 }
 input[type="submit"] {
-	width: 42%;
+	width: 102%;
 }
 textarea {
 	height: 200px;
@@ -258,11 +256,18 @@ textarea {
 	background-color: #002828;
 	color: white;
 	padding: 1%;
-	width: 40%;
+	width: 100%;
 	text-align: center;
 	cursor: pointer;
 }
-
+.contact-page {
+	display: inline-table;
+}
+form {
+	float: left;
+	width: 45%;
+	padding-right: 10%;
+}
 @media (max-width: 780px) {
 	nav ul {
 		width: 100%;
@@ -292,7 +297,7 @@ textarea {
 		border: 11.5px solid #1E90FF;
 		top: 0.6em;
 	}
-	nav ul, input, textarea, input[type="submit"] {
+	nav ul, form {
 		width: 100%;
 	}
 	article h1 {

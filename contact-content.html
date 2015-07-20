@@ -1,19 +1,21 @@
                 <script type="text/javascript" src="//api.filepicker.io/v2/filepicker.js"></script>
-                <article>
-                    <h1>Motocatts</h1>
+                <article class="contact-page">
+                    <header>
+                        <h1>Motocatts</h1>
+                    </header>
                     <h2>Conte sua História</h2>
-                    <div>
-                        <form id="contact-form" action="http://formspree.io/bruallima@gmail.com" method="POST">
-                            <input type="text" name="Nome" id="name-contact-form" placeholder="Nome" required>
-                            <input type="email" name="Email" placeholder="Email" required>
-                            <input type="hidden" id="subject-contact-form" name="_subject" value="[História de Motocatt]" />
-                            <input type="hidden" id="pics-contact-form" name="Fotos" value="" />
-                            <textarea name="Mensagem" placeholder="Conte um pouco sobre você e sua história!" required></textarea>
-                            <p id="filePick" class="contact-pics">Selecionar fotos</p>
-                            <input type="text" name="_gotcha" style="display:none" />
-                            <input type="hidden" name="_next" value="motocatt/confirmation.html" />
-                            <input type="submit" value="Enviar">
-                        </form>
-                    </div>
+                    <form id="contact-form" action="http://formspree.io/bruallima@gmail.com" method="POST">
+                        <input type="text" name="Nome" id="name-contact-form" placeholder="Nome" required>
+                        <input type="email" name="Email" placeholder="Email" required>
+                        <input type="hidden" id="subject-contact-form" name="_subject" value="[História de Motocatt]" />
+                        <input type="hidden" id="pics-contact-form" name="Fotos" value="" />
+                        <textarea name="Mensagem" placeholder="Conte um pouco sobre você e sua história!" required></textarea>
+                        <p id="filePick" class="contact-pics">Selecionar fotos</p>
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <input type="hidden" name="_next" value="motocatt/confirmation.html" />
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <p>Você também pode enviar sua história para email bruallima@gmail.com!</p>
+                    <p>Ao clicar em "Enviar" você aceita ter seus dados publicados no Blog Motocatt. Para removê-los entre em contato pelo email bruallima@gmail.com</p>
                 </article>
                 <script type="text/javascript" async src="js/formspree.js"></script>
