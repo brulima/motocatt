@@ -67,7 +67,6 @@ var buildConcatObject = function () {
 
 var process = function(data, path){
 	path = 'post/' + path.replace(/\.\.\/template-post\/[0-9]+\./, "");
-	console.log(path)
 	if (data.indexOf('<!--ContinueLendo-->') >= 0){
 		data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a></div>\n					</article>';
 	}

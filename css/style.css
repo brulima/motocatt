@@ -30,6 +30,9 @@ body {
 a:link {
 	text-decoration: none;
 }
+article a:visited {
+	color:#FD053E;
+}
 .header h1 {
 	line-height: 110px;
 	text-align: center;
