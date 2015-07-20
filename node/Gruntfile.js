@@ -6,6 +6,8 @@ var header = '../_header.html';
 var fbComents = '../_fb_coments.html';
 var footer = '../_footer.html';
 var about = '../about-content.html';
+var contact = '../contact-content.html';
+var confirmation = '../confirmation-content.html';
 var headerMotocatts = '../_headerMotocatts.html';
 var indexFile = '../index.html';
 var aboutFile = '../about.html';
@@ -14,8 +16,10 @@ var motocFile = '../motocatts.html';
 var conc_home = {
 	'../index.html': [header]
 };
-var conc_about = {
-	'../about.html': [header, about, footer]
+var conc_scoped = {
+	'../about.html': [header, about, footer],
+	'../contact.html': [header, contact, footer],
+	'../confirmation.html': [header, confirmation, footer]
 };
 var conc_post = {};
 var conc_author = {};
@@ -93,7 +97,7 @@ var setFacebookPage = function(dir) {
 		var filePath = dir + file;
 		var data = fs.readFileSync(filePath, 'utf-8');
 
-		data = data.replace('<div class="fb-comments" data-href="https://brulima.github.io/motocatt/post/" data-width="100%" data-numposts="3"></div>', 
+		data = data.replace('<div class="fb-comments" data-href="https://brulima.github.io/motocatt/post/" data-width="100%" data-numposts="3"></div>',
 			'<div class="fb-comments" data-href="https://brulima.github.io/motocatt/post/' + file + '" data-width="100%" data-numposts="3"></div>');
 
 		fs.writeFileSync(filePath, data, 'utf-8');
@@ -136,11 +140,8 @@ module.exports = function(grunt) {
 				},
 				files: conc_home
 			},
-			about: {
-				options: {
-					process: process
-				},
-				files: conc_about
+			scoped: {
+				files: conc_scoped
 			}
 		}
 	});

@@ -237,6 +237,40 @@ article img.width-45 {
 .center {
 	text-align: center;
 }
+input, textarea {
+	display: block;
+	margin-bottom: 2%;
+	padding: 1%;
+	font-family: 'Segan';
+	font-size: 1.1em;
+	width: 40%;
+}
+input[type="submit"] {
+	width: 42%;
+}
+textarea {
+	height: 200px;
+}
+.contact-pic p {
+	margin: 0;
+	margin-bottom: 1%;
+}
+.contact-pic p>span {
+	background-color: #002828;
+	margin-left: 3%;
+	color: white;
+	padding: 0.2% 0.8%;
+	display: inline;
+}
+.contact-pic p span:hover span {
+	display: inline;
+}
+.contact-pic p span span{
+	display: none;
+}
+.contact-pic {
+	margin-bottom: 2%;
+}
 @media (max-width: 780px) {
 	nav ul {
 		width: 100%;
@@ -266,7 +300,7 @@ article img.width-45 {
 		border: 11.5px solid #1E90FF;
 		top: 0.6em;
 	}
-	nav ul {
+	nav ul, input, textarea, input[type="submit"] {
 		width: 100%;
 	}
 	article h1 {
