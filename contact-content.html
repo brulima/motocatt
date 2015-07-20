@@ -7,14 +7,13 @@
                             <input type="text" name="Nome" id="name-contact-form" placeholder="Nome" required>
                             <input type="email" name="Email" placeholder="Email" required>
                             <input type="hidden" id="subject-contact-form" name="_subject" value="[História de Motocatt]" />
+                            <input type="hidden" id="pics-contact-form" name="Fotos" value="" />
                             <textarea name="Mensagem" placeholder="Conte um pouco sobre você e sua história!" required></textarea>
-                            <div class="contact-pic">
-                                <p>Envie fotos! <span class="more-information">? <span>Clique no botão "Pick File" e escolha suas fotos!</span></span></p>
-                                <input type="filepicker-dragdrop" data-fp-apikey="AXGjFPz0Q4yxQ5WGd9loJz" data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-multiple="true" data-fp-services="COMPUTER,FACEBOOK,GOOGLE_DRIVE,INSTAGRAM,URL">
-                            </div>
+                            <p id="filePick" class="contact-pics">Selecionar fotos</p>
                             <input type="text" name="_gotcha" style="display:none" />
                             <input type="hidden" name="_next" value="motocatt/confirmation.html" />
                             <input type="submit" value="Enviar">
                         </form>
                     </div>
                 </article>
+                <script type="text/javascript" async src="js/formspree.js"></script>

@@ -254,26 +254,15 @@ input[type="submit"] {
 textarea {
 	height: 200px;
 }
-.contact-pic p {
-	margin: 0;
-	margin-bottom: 1%;
-}
-.contact-pic p>span {
+.contact-pics {
 	background-color: #002828;
-	margin-left: 3%;
 	color: white;
-	padding: 0.2% 0.8%;
-	display: inline;
+	padding: 1%;
+	width: 40%;
+	text-align: center;
+	cursor: pointer;
 }
-.contact-pic p span:hover span {
-	display: inline;
-}
-.contact-pic p span span{
-	display: none;
-}
-.contact-pic {
-	margin-bottom: 2%;
-}
+
 @media (max-width: 780px) {
 	nav ul {
 		width: 100%;
