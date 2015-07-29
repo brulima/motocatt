@@ -1,5 +1,6 @@
 (function formspree() {
 	var doc = document;
+	var fileCounter = 0;
 	var getElement = function (id) {
 		return doc.getElementById(id);
 	};
@@ -19,12 +20,26 @@
 			function(data){
 				for (var i = 0; i < data.length; i++) {
 					var file = data[i];
-					console.log(file);
-					getElement('pics-contact-form').value += '|' + file.filename + '| ';
+					var fileInput = document.createElement('input');
+
+					fileInput.type = 'hidden';
+					fileInput.name = 'Foto ' + (++fileCounter);
+					fileInput.value = file.filename + ': ' + file.url;
+
+					getElement('contact-form').appendChild(fileInput);
+					getElement('filePick').innerHTML = '✓ Fotos Selecionadas';
 				};
 			},
 			function(data){
-				console.log(JSON.stringify(error));
+				var fileCounter = 0;
+				for (var i = 0; i < data.length; i++) {
+					var file = data[i];
+					var fileInput = document.createElement('input');
+					fileInput.type = 'hidden';
+					fileInput.name = 'Foto não recebida ' + (++fileCounter);
+					fileInput.value = file.name + file.url;
+					getElement('contact-form').appendChild(fileInput);
+				};
 			}
 		);
 	});
