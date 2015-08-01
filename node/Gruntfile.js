@@ -52,7 +52,7 @@ var buildConcatObject = function () {
 		}
 	});
 
-	for (var auth in conc_author && conc_author.hasOwnProperty(auth)) {
+	for (var auth in conc_author) {
 		conc_author[auth].push(footer);
 	}
 
