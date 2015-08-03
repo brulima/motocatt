@@ -63,7 +63,7 @@ var buildConcatObject = function () {
 		}
 	});
 
-	for (var file in conc_feed && conc_feed.hasOwnProperty(file)) {
+	for (var file in conc_feed) {
 		conc_feed[file].push(footer);
 	}
 };

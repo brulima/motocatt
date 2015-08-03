@@ -30,6 +30,7 @@ body {
 a:link {
 	text-decoration: none;
 }
+article a,
 article a:visited {
 	color:#FD053E;
 }

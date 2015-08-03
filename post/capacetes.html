@@ -6,23 +6,8 @@
 		<meta property="fb:app_id" content="404462066411902" />
 		<title>motocatt | Capacetes</title>
 		<base href="http://brulima.github.io/motocatt/">
-		<script>
-			(function homolog (hostname) {
-				if (hostname.indexOf('homolog') > -1) {
-					var base = document.querySelector('base');
-					base.setAttribute('href', hostname);
-				} else {
-					var base = document.querySelector('base');
-					base.setAttribute('href', hostname + 'motocatt/');
-					var script = document.createElement('script');
-					script.type = "text/javascript";
-					script.async = true;
-					script.src = 'js/ga.js';
-					document.head.appendChild(script);
-				}
-			})('http://' + document.location.hostname + '/');
-		</script>
-		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/ga.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
