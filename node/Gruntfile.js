@@ -33,8 +33,8 @@ var conc_scoped = {
 	'../confirmation.html': [header, confirmation, footer]
 };
 
-var buildConcatObject = function () {
-	fs.readdirSync(templatePostFolder).forEach(function (session) {
+var buildConcatObject = function() {
+	fs.readdirSync(templatePostFolder).forEach(function(session) {
 		// Concat home
 		conc_feed[indexFile].push(templatePostFolder + session);
 
@@ -50,10 +50,9 @@ var buildConcatObject = function () {
 		var info = data.match(/\<h2.*\<a href\=\".*author\/.*\"\>.*\<\/h2\>/)[0];
 		var auth = "../author/" + info.split('author/')[1].split('"')[0];
 
-		if (conc_feed[auth]){
+		if (conc_feed[auth]) {
 			conc_feed[auth].push(templatePostPath);
-		}
-		else {
+		} else {
 			conc_feed[auth] = [header, templatePostPath];
 		}
 
@@ -68,12 +67,12 @@ var buildConcatObject = function () {
 	}
 };
 
-var process = function(data, path){
+var process = function(data, path) {
 	path = 'post/' + path.replace(/\.\.\/template-post\/[0-9]+\./, "");
-	if (data.indexOf('<!--ContinueLendo-->') >= 0){
+	if (data.indexOf('<!--ContinueLendo-->') >= 0) {
 		data = data.split('<!--ContinueLendo-->')[0] + '<a href="' + path + '" class="keep-reading">Continue Lendo</a></div>\n					</article>';
 	}
-	data = data.replace("<h1>", '<h1><a href="'+ path + '">');
+	data = data.replace("<h1>", '<h1><a href="' + path + '">');
 	data = data.replace("</h1>", '</a></h1>');
 	return data;
 };
@@ -81,7 +80,7 @@ var process = function(data, path){
 
 var setTitle = function(dir) {
 	dir = '../' + dir + '/';
-	fs.readdirSync(dir).forEach(function (file){
+	fs.readdirSync(dir).forEach(function(file) {
 		var author = getTitleName(file);
 		var title = 'motocatt | ' + author;
 		var file = dir + file;
@@ -93,7 +92,7 @@ var setTitle = function(dir) {
 	});
 };
 
-var setScopedTitle = function () {
+var setScopedTitle = function() {
 	for (var i = 0; i < scopedTitle.length; i++) {
 		var scoped = scopedTitle[i];
 		var file = '../' + scoped.file + '.html';
@@ -109,7 +108,7 @@ var setScopedTitle = function () {
 
 var setFacebookPage = function(dir) {
 	dir = '../' + dir + '/';
-	fs.readdirSync(dir).forEach(function (file){
+	fs.readdirSync(dir).forEach(function(file) {
 		var filePath = dir + file;
 		var data = fs.readFileSync(filePath, 'utf-8');
 		var href = 'https://brulima.github.io/motocatt/post/' + file;
@@ -122,7 +121,7 @@ var setFacebookPage = function(dir) {
 	});
 };
 
-var getTitleName = function (file) {
+var getTitleName = function(file) {
 	file = file.replace('.html', '');
 	file = file.split('-');
 
@@ -146,6 +145,16 @@ module.exports = function(grunt) {
 			scoped: {
 				files: conc_scoped
 			}
+		},
+		imagemin: {
+			dynamic: {
+				files: [{
+					expand: true,
+					cwd: '../images/',
+					src: ['**/*.{png,jpg,gif}'],
+					dest: '../imagesmin/'
+				}]
+			}
 		}
 	});
 
@@ -155,7 +164,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('buildConcatObject', buildConcatObject);
 	grunt.registerTask('setFacebookPage', setFacebookPage);
 	grunt.registerTask('setScopedTitle', setScopedTitle);
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-	grunt.registerTask('default', ['buildConcatObject', 'concat', 'setTitle:post', 'setTitle:author', 'setFacebookPage:post', 'setScopedTitle']);
+	grunt.registerTask('default', ['imagemin', 'buildConcatObject', 'concat', 'setTitle:post', 'setTitle:author', 'setFacebookPage:post', 'setScopedTitle']);
 
 };

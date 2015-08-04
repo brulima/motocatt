@@ -11,12 +11,12 @@
 	src: url(../fonts/Segan.ttf);
 }
 body {
-	background: url(../images/background-image.jpg), repeat-y;
+	background: url(../imagesmin/background-image.jpg), repeat-y;
 	margin: 0;
 	padding: 0;
 }
 .fundo-principal {
-	background-image: url(../images/wavegrid.png);
+	background-image: url(../imagesmin/wavegrid.png);
 	min-height: 80%;
 	margin: 3% 12.8%;
 	border-radius: 10px;
